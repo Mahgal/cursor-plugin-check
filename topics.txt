@@ -1,0 +1,1 @@
+cursor, cursor-plugin, plugin-validation, json-schema, cli, python, developer-tools, ai-coding, agent-skills, plugin

@@ -1,0 +1,1 @@
+{"author":{"name":"Example Author"},"category":"magic-tools","commands":["./commands/","./commands/"],"displayName":"Bad Plugin","license":"MIT","name":"bad-plugin","skills":"./skills/does-not-exist.md","version":"0.1.0"}

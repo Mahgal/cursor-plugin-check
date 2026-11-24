@@ -1,0 +1,32 @@
+cursor-plugin-check --demo
+
+fixtures/bad-plugin -- 4 check(s) failed:
+FAIL  description-present    description missing (present in 16/16 official plugins)
+FAIL  category-known         category 'magic-tools' not used by any official plugin (observed: developer-tools, utilities); use --allow-category to accept it
+FAIL  refs-exist             skills: no such file or directory: ./skills/does-not-exist.md
+FAIL  no-duplicate-commands  duplicate commands entry: ./commands/
+17 passed, 4 failed, 0 skipped -- FAIL
+
+fixtures/good-plugin -- all 21 checks passed:
+PASS  manifest               .cursor-plugin/plugin.json found
+PASS  manifest-json          valid JSON object, 16 top-level keys
+PASS  name-required          name=good-plugin
+PASS  name-format            kebab-case, matches schema pattern
+PASS  name-matches-dir       name matches directory 'good-plugin'
+PASS  no-unknown-fields      no fields outside the schema
+PASS  description-present    description present
+PASS  display-name-present   displayName present
+PASS  version-present        version present
+PASS  version-semver         version 1.0.0 is valid semver
+PASS  category-known         category 'developer-tools' used by official plugins
+PASS  author-valid           author Example Author
+PASS  urls-valid             homepage/repository URLs look valid
+PASS  keywords-tags-valid    keywords/tags are string arrays
+PASS  min-client-versions    1 client requirement(s) valid
+PASS  variables-valid        variables not set (optional)
+PASS  refs-exist             3 referenced file(s) found
+PASS  hooks-valid            hooks not set (optional)
+PASS  mcp-servers-valid      mcpServers not set (optional)
+PASS  logo-exists            logo not set (optional)
+PASS  no-duplicate-commands  no duplicate command names
+21 passed, 0 failed, 0 skipped -- PASS
